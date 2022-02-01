@@ -26,5 +26,10 @@ namespace BeatSaberPlaylistToHash.Models
         /// Gets or sets the song list of the playlist
         /// </summary>
         public List<PlaylistSong> Songs { get; set; } = new ();
+
+        /// <summary>
+        /// Gets or sets the image base64 string
+        /// </summary>
+        public string Image { get; set; } = "";
     }
 }
