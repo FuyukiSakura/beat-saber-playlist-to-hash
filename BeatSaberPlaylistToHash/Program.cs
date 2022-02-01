@@ -30,7 +30,10 @@ namespace BeatSaberPlaylistToHash
 
             var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
             var jsonString = JsonSerializer.Serialize(playlist, options);
-            await File.WriteAllTextAsync($"{dir}/{filename}.json", jsonString);
+
+            var playlistFilename = $"{dir}/{filename}.json";
+            await File.WriteAllTextAsync(playlistFilename, jsonString);
+            Console.WriteLine($"Playlist created at: {playlistFilename}");
         }
 
         /// <summary>
